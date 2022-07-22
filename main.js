@@ -7,7 +7,7 @@ import {OrbitControls} from "../vendor_mods/three/examples/jsm/controls/OrbitCon
 //import * as THREE from 'three';
 //import { OrbitControls } from 'OrbitControls';
 
-
+//test git
 
 var controls, camera, renderer;
 const scene = new THREE.Scene();
