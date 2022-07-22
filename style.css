@@ -1,0 +1,97 @@
+/*both the body and canvas css sections make sure that you can't scroll*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+body { 
+    margin: 0; 
+    height: 100vh;
+    background: #110912;
+    font-family:"Montserrat", sans-serif;
+    margin-left:50px;
+}
+  
+canvas { 
+  display: block;
+    
+    
+}
+
+h1 {
+    
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    color: #eee;
+    text-align: center
+  }
+  .slidecontainer {
+    width: 100%; /* Width of the outside container */
+  }
+  
+  /* The slider itself */
+  .slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 60%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #e5ecec; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    border-radius: 10em;
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: rgb(28, 28, 122); /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 10em;
+    
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: rgb(28, 28, 122); /* Green background */
+    border-color: white;
+    cursor: pointer; /* Cursor on hover */
+    
+  }
+  
+  
+     
+  
+
+  #paragraph
+  {
+  display:block;
+  color:#eee;
+  font-family: 'Montserrat', sans-serif;
+  }
+  button{
+    cursor: pointer;
+    padding:10px 32px;
+    margin:4px 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:900;
+    display:inline-block;
+    background-color: #e1ad01;
+    color: white;
+
+  }
+
+  #rangevalue{ color:#eee;
+    font-family: 'Montserrat', sans-serif;}
+  #rangevalue2{ color:#eee;
+    font-family: 'Montserrat', sans-serif;}
+  #rangevalue3{ color:#eee;
+    font-family: 'Montserrat', sans-serif;}
+
+  

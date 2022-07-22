@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv ="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloch_Sphere</title>
+    <link rel="stylesheet" href="./style.css"> 
+    <script type = "module" src="./main.js"></script>
+    <style>
+        #myDIV {
+          width: 100%;
+          padding: 50px 0;
+          text-align: center;
+          background-color: #e5ecec ;
+          margin-top: 20px;
+        }
+    </style> 
+    <!--
+        
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.min.js"></script>
+
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/addons/p5.sound.min.js"></script>
+    -->
+    <!-- <script type="importmap">
+         {
+            "imports": {
+                "three": "https://unpkg.com/three@0.138.0/build/three.module.js",
+                "OrbitControls": "https://unpkg.com/three@0.138.0/examples/jsm/controls/OrbitControls.js"
+            }
+        }
+    </script>   -->
+</head>
+<body>
+    <h1> The Bloch Sphere and Quantum Gates </h1>
+    <button onclick="myFunction()" style="display:block">Show/Hide text</button>
+
+    <div id="myDIV">
+    <p style="font-weight: bolder"> (INSERT TEXT THAT EXPLAINS SUBJECT OF VISUALISATION) </p>
+                
+    </div>
+   
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myDIV");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        }
+    </script>
+    
+    <br><br>
+    <br><br>
+    <div class="slidecontainer">
+        <hr>
+        <p style="color:#eee;
+        font-family: 'Montserrat', sans-serif; text-align:center; font-weight: bolder;">INITIAL STATE PARAMETERS:</p>
+        <hr>
+        <br><br>
+        <label style="color:#eee;
+        font-family: 'Montserrat', sans-serif;">Magnitude (r):</label><br>
+        <input type="range" min="0" max="1" value="0" step="0.01" class="slider" id="myRange_rad" onchange="rangevalue.value=value"/> <!--value is the default value-->
+        <br><br>
+        <br><br>
+        <label style="color:#eee;
+        font-family: 'Montserrat', sans-serif;">Polar angle (theta):</label><br>
+        <input type="range" min="0" max="3.14" value="0" step="0.01" class="slider" id="myRange_theta" onchange="rangevalue2.value=value"/>
+        <br><br>
+        <br><br>
+        <label style="color:#eee;
+        font-family: 'Montserrat', sans-serif;">Azimuthal angle (phi):</label><br>
+        <input type="range" min="0" max="6.28" value="0" step="0.01" class="slider" id="myRange_phi" onchange="rangevalue3.value=value"/>
+        <!---
+        <label>Rotation axis - x </label><br>
+        <input type="range" min="0" max="1" value="0" step="0.01" class="slider" id="xrotaxis" oninput="setAxis()"/>
+        <label>Rotation axis - y </label><br>
+        <input type="range" min="0" max="1" value="0" step="0.01" class="slider" id="yrotaxis" oninput="setAxis()"/>
+        <label>Rotation axis - z </label><br>
+        <input type="range" min="0" max="1" value="0" step="0.01" class="slider" id="zrotaxis" oninput="setAxis()"/>
+        -->
+        <span class="highlight"></span>
+        <p style="color:#eee;
+        font-family: 'Montserrat', sans-serif;"> Magnitude (r): <output id="rangevalue"></output> </p>
+        <span class="highlight2"></span>
+        <p style="color:#eee;
+        font-family: 'Montserrat', sans-serif;"> Polar angle (theta): <output id="rangevalue2"></output> </p>
+        <span class="highlight3"></span>
+        <p style="color:#eee;
+        font-family: 'Montserrat', sans-serif;"> Azimuthal angle (phi): <output id="rangevalue3"></output> </p>
+    </div>
+
+    <button id="btn_rad" type="submit" style="display:block">Go</button>
+    <br><br>
+    <hr>
+    <p style="color:#eee;
+        font-family: 'Montserrat', sans-serif; text-align:center; font-weight: bolder;">APPLY QUANTUM GATE:</p>
+    <hr>
+    <br><br>
+    <button id="paulixbutton" style="
+    margin-left: auto;
+    margin-right: auto"> Pauli-x gate </button>
+    <button id="pauliybutton" style="
+    margin-left: auto;
+    margin-right: auto"> Pauli-y gate </button>
+    <button id="paulizbutton" style="
+    margin-left: auto;
+    margin-right: auto">  Pauli-z gate </button>
+    <button id="hadamard" style="
+    margin-left: auto;
+    margin-right: auto"> Hadamard gate </button>
+    <button id="identity" style="
+    margin-left: auto;
+    margin-right: auto"> Identity gate </button>
+    <br><br>
+    <br><br>
+    <p style="color:#eee;
+    font-family: 'Montserrat', sans-serif; text-align:center;">(Zoom in below using your mousepad to start)</p>
+    <!--<p>Value: <span id="demo"></span></p>-->
+    </div>
+    
+    <!--<script>
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value; // Display the default slider value
+        
+        // Update the current slider value (each time you drag the slider handle)
+        slider.oninput = function() {
+        output.innerHTML = this.value;
+        }
+        </script>-->
+    <!--above line https://stackoverflow.com/questions/58211880/uncaught-syntaxerror-cannot-use-import-statement-outside-a-module-when-import-->
+</body>
+</html>
+
